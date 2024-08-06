@@ -30,10 +30,10 @@ const Contact = () => {
   };
 
   return (
-    <div id='contact' className='flex flex-col items-center justify-center min-h-screen p-12 bg-gradient-to-r from-teal-200 via-teal-300 to-teal-500'>
-      <h1 className='text-4xl font-bold text-blue-600 mb-8'>Get in touch</h1>
+    <div id='contact' className='flex flex-col items-center justify-center min-h-screen p-12 bg-custom-white'>
+      <h1 className='text-4xl font-bold border-b-2 border-solid  border-custom-blue text-custom-blue mb-8'>Get in touch</h1>
      
-      <form onSubmit={handleSubmit} ref={form} className='flex flex-col w-full max-w-lg bg-white p-8 rounded-lg shadow-lg'>
+      <form onSubmit={handleSubmit} ref={form} className='flex flex-col w-full  md:max-w-lg p-8 rounded-lg   '>
         <input
           type="text"
           placeholder='Name'
@@ -41,7 +41,7 @@ const Contact = () => {
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
-          className='p-3 border border-gray-300 rounded mb-4 focus:outline-none focus:ring-2 focus:ring-teal-500'
+          className='p-3 border text-custom-blue border-custom-blue rounded mb-4 focus:outline-none focus:ring-2 focus:ring-custom-lt-green'
         />
         <input
           type="text"
@@ -50,7 +50,7 @@ const Contact = () => {
           value={subject}
           onChange={(e) => setSubject(e.target.value)}
           required
-          className='p-3 border border-gray-300 rounded mb-4 focus:outline-none focus:ring-2 focus:ring-teal-500'
+          className='p-3 border  text-custom-blue border-custom-blue rounded mb-4 focus:outline-none focus:ring-2 focus:ring-custom-lt-green'
         />
         <textarea
           placeholder='Description'
@@ -59,9 +59,9 @@ const Contact = () => {
           onChange={(e) => setDescription(e.target.value)}
           required
           rows={6}
-          className='p-3 border border-gray-300 rounded mb-4 focus:outline-none focus:ring-2 focus:ring-teal-500 resize-none'
+          className='p-3 border  text-custom-blue font-normal border-custom-blue rounded mb-4 focus:outline-none focus:ring-2 focus:ring-custom-lt-green resize-none'
         ></textarea>
-        <button type="submit" className='bg-blue-600 text-white px-4 py-3 rounded-lg transition-all duration-300 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-500'>Send Message</button>
+        <button type="submit" className='bg-custom-lt-green text-custom-white px-4 py-3 rounded-lg transition-all duration-300 hover:bg-custom-blue focus:outline-none focus:ring-2 focus:ring-custom-lt-green'>Send Message</button>
       </form>
     </div>
   );
