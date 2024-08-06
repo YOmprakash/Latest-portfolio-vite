@@ -9,6 +9,7 @@ import crud     from '../assets/crud.png';
 import Instashare  from '../assets/Instashare.png';
 import NxtTrendz from  '../assets/NxtTrendz.png';
 import Portfolio  from '../assets/Portfolio.png'
+import Todo  from '../assets/Todo.png'
 
 const projectsData = [
     {
@@ -33,16 +34,27 @@ const projectsData = [
     },
     {
       id: 3,
+      title: 'Portfolio',
+      img: Portfolio,
+      description: 'Welcome to my portfolio! This website is a showcase of my skills, projects, and professional journey. Built with React.js and styled with Tailwind CSS, the portfolio highlights my expertise in frontend development, UI/UX design, and animation using Framer Motion.',
+      techStack: ['React.js', 'Tailwind CSS,Framer Motion'],
+      gitLink: 'https://github.com/YOmprakash/Latest-portfolio-vite.git',
+      deployLink: 'https://chat.example.com',
+      category: 'frontend',
+    },
+    {
+      id: 4,
       title: 'Nxtwave Clone',
      img: Nxtwave,
       description: 'I have built a clone of the NxtWave website using React.js and CSS. This project showcases my ability to replicate a professional website and stands out due to its attention to detail and functionality, closely mirroring the original NxtWave website.',
       techStack: ['React','CSS',],
       gitLink: 'https://github.com/YOmprakash/Nxtwave-clone.git',
       deployLink: 'https://omprakash-nxtwave-clone.vercel.app/',
-      category: 'fullstack',
+      category: 'frontend',
     },
+
     {
-      id: 4,
+      id: 5,
       title: 'Rental Website',
       img: Rental,
       description: 'This project is a property rental platform developed using React, Tailwind CSS, and Redux. The platform allows users to browse property listings, manage bookings, and complete the checkout process. The design is responsive, ensuring a seamless user experience on both desktop and mobile devices.',
@@ -52,7 +64,7 @@ const projectsData = [
       category: 'frontend',
     },
     {
-      id: 5,
+      id: 6,
       title: 'Social Media App',
       img: Instashare,
       description: 'Implemented responsive Streaming Application like Instagram Clone where users can log in and see a list of stories and posts, user can also search posts with post caption, user can be able to like and dislike the post and also view the user specific posts.',
@@ -62,7 +74,7 @@ const projectsData = [
       category: 'frontend',
     },
     {
-      id: 5,
+      id: 7,
       title: 'NxtTrendz',
       img: NxtTrendz,
       description: 'I have developed an online shopping app called Nxt Trendz, similar to Amazon. I developed it using React in a week. It allows users to log in, select products, and add them to their shopping cart.',
@@ -72,7 +84,7 @@ const projectsData = [
       category: 'frontend',
     },
     {
-      id: 5,
+      id: 8,
       title: 'CRUD Website',
       img: crud,
       description: 'This ReactJS application offers comprehensive CRUD functionality allowing you to effortlessly create, edit, and delete posts while maintaining a clutter-free and visually appealing experience.',
@@ -81,16 +93,18 @@ const projectsData = [
       deployLink: 'https://wylo-assignment-kappa.vercel.app/',
       category: 'frontend',
     },
+    
     {
-      id: 5,
-      title: 'Chat Application',
-      img: Portfolio,
-      description: 'Welcome to my portfolio! This website is a showcase of my skills, projects, and professional journey. Built with React.js and styled with Tailwind CSS, the portfolio highlights my expertise in frontend development, UI/UX design, and animation using Framer Motion.',
-      techStack: ['React.js', 'Tailwind CSS,Framer Motion'],
-      gitLink: 'https://github.com/YOmprakash/Latest-portfolio-vite.git',
-      deployLink: 'https://chat.example.com',
+      id: 9,
+      title: 'Todo Website',
+      img: Todo,
+      description: 'TThis Basic To-Do List Application is designed to help users manage their daily tasks efficiently. The application is built using React for the frontend and Node.js with Express and MongoDB for the backend. Tailwind CSS is used for styling the frontend, providing a clean and responsive user interface.',
+      techStack: ["ReactJS,  Tailwind CSS,  Node.js,  Express,  MongoDB"],
+      gitLink: 'https://github.com/YOmprakash/todo-full-stock.git',
+      deployLink: 'https://todo-frontend-gold-one.vercel.app/',
       category: 'fullstack',
     },
+    
   ];
   
   export default projectsData;

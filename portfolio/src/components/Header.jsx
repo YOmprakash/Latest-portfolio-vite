@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 import { IconMenu2, IconX } from "@tabler/icons-react";
 import { Link } from "react-scroll";
 
@@ -10,7 +11,10 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed w-full z-50 bg-custom-green ">
+    <motion.header
+    initial={{ opacity: 0, y: -50 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.5 }} className="fixed w-full z-50 bg-custom-green ">
       <div className="flex items-center justify-between px-4 md:px-16 md:py-4">
         <Link to="home" smooth={true} duration={500} offset={-50}>
           <span className="text-2xl font-extrabold text-custom-white cursor-pointer">
@@ -133,7 +137,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-    </header>
+    </motion.header>
   );
 };
 
