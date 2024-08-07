@@ -35,7 +35,7 @@ const Header = () => {
             to="about"
             smooth={true}
             duration={700}
-            offset={-10}
+            offset={-50}
             className="text-lg uppercase cursor-pointer font-semibold text-custom-white hover:text-custom-blue hover:font-semibold border-b-2 border-transparent hover:border-custom-blue transition-all duration-300"
           >
             About

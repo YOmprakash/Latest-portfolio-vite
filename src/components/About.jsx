@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const About = () => (
   <section
     id="about"
-    className="flex flex-col items-center justify-center bg-custom-white h-screen w-full my-6"
+    className="flex flex-col items-center justify-center bg-custom-white h-full py-12 w-full my-6"
   >
     <h3 className="text-custom-blue border-b-2 border-custom-blue text-3xl font-extrabold uppercase text-center mb-12">
       About Me
