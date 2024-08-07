@@ -36,21 +36,25 @@ const Hero = () => (
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 , delay: 0.6 }}
         className="flex items-center justify-center gap-4 md:justify-start mt-6">
-          <a
+          <motion.a
+          initial={{scale:1}}
+          whileHover={{scale:1.2}}
             href="https://www.linkedin.com/in/omprakash-yamavaram/"
             target="_blank"
             rel="noopener noreferrer"
             className="mr-2"
           >
-            <IconBrandLinkedin className="text-custom-simple-white w-10 h-10 bg-custom-blue p-2 rounded-full transition-transform hover:scale-110  hover:text-custom-lt-green" />
-          </a>
-          <a
+            <IconBrandLinkedin className="text-custom-simple-white w-10 h-10 bg-custom-blue p-2 rounded-full transition-transform   hover:text-custom-blue hover:bg-custom-white" />
+          </motion.a>
+          <motion.a
+          initial={{scale:1}}
+          whileHover={{scale:1.2}}
             href="https://github.com/YOmprakash?tab=repositories"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <IconBrandGithub className="text-custom-simple-white w-10 h-10 bg-custom-blue p-2 rounded-full transition-transform hover:scale-110 hover:text-custom-lt-green" />
-          </a>
+            <IconBrandGithub className="text-custom-simple-white w-10 h-10 bg-custom-blue p-2 rounded-full transition-transform  hover:text-custom-blue hover:bg-custom-white" />
+          </motion.a>
         </motion.div>
       </div>
 
