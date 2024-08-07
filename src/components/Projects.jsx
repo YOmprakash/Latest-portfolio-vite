@@ -74,7 +74,7 @@ const Projects = () => {
             key={project.id}
            
             variants={itemVariants}
-            className="p-4 bg-custom-white rounded-lg hover:shadow-2xl overflow-hidden"
+            className="p-4 bg-custom-white flex flex-col rounded-lg hover:shadow-2xl overflow-hidden"
           >
             <img src={project.img} alt={`${project.title} image`} className="w-full h-48 object-cover mb-4 rounded-lg" />
             <div className="p-4 flex flex-col flex-grow">
