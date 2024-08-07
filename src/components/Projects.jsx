@@ -74,12 +74,14 @@ const Projects = () => {
             key={project.id}
            
             variants={itemVariants}
-            className="p-4 bg-custom-white rounded-lg hover:shadow-2xl"
+            className="p-4 bg-custom-white rounded-lg hover:shadow-2xl overflow-hidden"
           >
             <img src={project.img} alt={`${project.title} image`} className="w-full h-48 object-cover mb-4 rounded-lg" />
-            <h2 className="text-xl font-bold text-custom-blue mb-2 text-center">{project.title}</h2>
-            <p className="text-gray-600 mb-4">{project.description}</p>
-            <p className="text-gray-500 mb-2"><strong className="text-custom-blue">Tech Stack:</strong> {project.techStack.join(', ')}</p>
+            <div className="p-4 flex flex-col flex-grow">
+              <h2 className="text-xl font-bold text-custom-blue mb-2 text-center">{project.title}</h2>
+              <p className="text-gray-600 mb-4 flex-grow">{project.description}</p>
+              <p className="text-gray-500 mb-2"><strong className="text-custom-blue">Tech Stack:</strong> {project.techStack.join(', ')}</p>
+            </div>
             <div className="flex justify-start items-center mt-4 gap-8">
               <a href={project.gitLink} target="_blank" rel="noopener noreferrer" className="text-custom-blue hover:text-custom-lt-green">
                 <FaGithub className="w-8 h-8" />
