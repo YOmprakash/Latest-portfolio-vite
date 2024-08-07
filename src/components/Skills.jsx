@@ -23,24 +23,27 @@ const Skills = () => {
     >
       <h1 className="text-4xl font-bold mb-12 text-custom-green">My Technical Skills</h1>
       <div className="flex space-x-4 mb-12">
-        <button
+        <motion.button
+        whileHover={{ scale: 1.1 }}
           className={`px-4 py-2 rounded transition-all duration-300 ${selectedCategory === 'all' ? 'bg-custom-green text-custom-white' : 'bg-custom-blue text-custom-green hover:text-custom-blue hover:bg-custom-lt-green'}`}
           onClick={() => setSelectedCategory('all')}
         >
           All
-        </button>
-        <button
+        </motion.button>
+        <motion.button
+        whileHover={{ scale: 1.1 }}
           className={`px-4 py-2 rounded transition-all duration-300 ${selectedCategory === 'frontend' ? 'bg-custom-green text-custom-white' : 'bg-custom-blue text-custom-green hover:text-custom-blue hover:bg-custom-lt-green'}`}
           onClick={() => setSelectedCategory('frontend')}
         >
           Frontend
-        </button>
-        <button
+        </motion.button>
+        <motion.button
+        whileHover={{ scale: 1.1 }}
           className={`px-4 py-2 rounded transition-all duration-300 ${selectedCategory === 'backend' ? 'bg-custom-green text-custom-white' : 'bg-custom-blue text-custom-green hover:text-custom-blue hover:bg-custom-lt-green'}`}
           onClick={() => setSelectedCategory('backend')}
         >
           Backend
-        </button>
+        </motion.button>
       </div>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
         {filteredSkills.map((skill) => (
