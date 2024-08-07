@@ -87,11 +87,11 @@ const Projects = () => {
               <p className="text-gray-600 mb-4 flex-grow">{project.description}</p>
               <p className="text-gray-500 "><strong className="text-custom-blue">Tech Stack:</strong> {project.techStack.join(', ')}</p>
             </div>
-            <div className="flex justify-center md:justify-start items-center my-2 gap-8">
-              <a href={project.gitLink} target="_blank" rel="noopener noreferrer" className="text-custom-blue hover:text-custom-lt-green">
+            <div className="flex justify-center md:justify-between items-center my-2 gap-8">
+              <a href={project.gitLink} target="_blank" rel="noopener noreferrer" className="text-custom-lt-green rounded-full p-2 bg-custom-blue hover:text-custom-blue hover:bg-custom-green">
                 <FaGithub className="w-8 h-8" />
               </a>
-              <a href={project.deployLink} target="_blank" rel="noopener noreferrer" className="text-custom-blue hover:text-custom-lt-green">
+              <a href={project.deployLink} target="_blank" rel="noopener noreferrer" className="text-custom-lt-green rounded-full p-3 bg-custom-blue hover:text-custom-blue hover:bg-custom-green">
                 <FaExternalLinkAlt className="w-6 h-6" />
               </a>
             </div>
