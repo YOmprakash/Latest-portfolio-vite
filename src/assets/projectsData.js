@@ -63,39 +63,11 @@ const projectsData = [
       deployLink: 'https://totality-frontend-challenge-two.vercel.app/',
       category: 'frontend',
     },
-    {
-      id: 6,
-      title: 'Social Media App',
-      img: Instashare,
-      description: 'Implemented responsive Streaming Application like Instagram Clone where users can log in and see a list of stories and posts, user can also search posts with post caption, user can be able to like and dislike the post and also view the user specific posts.',
-      techStack: ['React JS, CSS, Bootstrap, React Slick, Figma, client storage, React Icons '],
-      gitLink: 'https://github.com/YOmprakash/InstaShare.git',
-      deployLink: 'https://prakashinsta63.ccbp.tech',
-      category: 'frontend',
-    },
-    {
-      id: 7,
-      title: 'NxtTrendz',
-      img: NxtTrendz,
-      description: 'I have developed an online shopping app called Nxt Trendz, similar to Amazon. I developed it using React in a week. It allows users to log in, select products, and add them to their shopping cart.',
-      techStack: ['React JS, CSS, Bootstrap, React Icons'],
-      gitLink: 'https://github.com/YOmprakash/latestnxttrendz.git',
-      deployLink: 'https://prakahnxtrenz6.ccbp.tech/',
-      category: 'frontend',
-    },
-    {
-      id: 8,
-      title: 'CRUD Website',
-      img: crud,
-      description: 'This ReactJS application offers comprehensive CRUD functionality allowing you to effortlessly create, edit, and delete posts while maintaining a clutter-free and visually appealing experience.',
-      techStack: ["ReactJS, Redux, Tailwind CSS"],
-      gitLink: 'https://github.com/YOmprakash/wylo-assignment.git',
-      deployLink: 'https://wylo-assignment-kappa.vercel.app/',
-      category: 'frontend',
-    },
+    
+    
     
     {
-      id: 9,
+      id: 6,
       title: 'Todo Website',
       img: Todo,
       description: 'TThis Basic To-Do List Application is designed to help users manage their daily tasks efficiently. The application is built using React for the frontend and Node.js with Express and MongoDB for the backend. Tailwind CSS is used for styling the frontend, providing a clean and responsive user interface.',
