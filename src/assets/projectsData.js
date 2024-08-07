@@ -39,7 +39,7 @@ const projectsData = [
       description: 'Welcome to my portfolio! This website is a showcase of my skills, projects, and professional journey. Built with React.js and styled with Tailwind CSS, the portfolio highlights my expertise in frontend development, UI/UX design, and animation using Framer Motion.',
       techStack: ['React.js', 'Tailwind CSS,Framer Motion'],
       gitLink: 'https://github.com/YOmprakash/Latest-portfolio-vite.git',
-      deployLink: 'https://chat.example.com',
+      deployLink: 'https://latest-portfolio-vite-7brg.vercel.app/',
       category: 'frontend',
     },
     {
