@@ -30,10 +30,10 @@ const Contact = () => {
   };
 
   return (
-    <div id='contact' className='flex flex-col items-center justify-center min-h-screen p-12 bg-custom-white'>
+    <section id='contact' className=' flex flex-col justify-center items-center h-full py-8 bg-custom-white'>
       <h1 className='text-4xl font-bold border-b-2 border-solid  border-custom-blue text-custom-blue mb-8'>Get in touch</h1>
      
-      <form onSubmit={handleSubmit} ref={form} className='flex flex-col w-full  md:max-w-lg p-8 rounded-lg   '>
+      <form onSubmit={handleSubmit} ref={form} className='flex flex-col w-full  p-8 rounded-lg  md:max-w-lg '>
         <input
           type="text"
           placeholder='Name'
@@ -61,9 +61,9 @@ const Contact = () => {
           rows={6}
           className='p-3 border  text-custom-blue font-normal border-custom-blue rounded mb-4 focus:outline-none focus:ring-2 focus:ring-custom-lt-green resize-none'
         ></textarea>
-        <button type="submit" className='bg-custom-lt-green text-custom-white px-4 py-3 rounded-lg transition-all duration-300 hover:bg-custom-blue focus:outline-none focus:ring-2 focus:ring-custom-lt-green'>Send Message</button>
+        <button type="submit" className='bg-custom-lt-green text-custom-white px-4 py-3 rounded-lg transition-all duration-300 self-start  hover:bg-custom-blue focus:outline-none focus:ring-2 focus:ring-custom-lt-green'>Send Message</button>
       </form>
-    </div>
+    </section>
   );
 };
 

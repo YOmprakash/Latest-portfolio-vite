@@ -8,7 +8,7 @@ const About = () => (
     <h3 className="text-custom-blue border-b-2 border-custom-blue text-3xl font-extrabold uppercase text-center mb-12">
       About Me
     </h3>
-    <div className="flex flex-col items-center justify-center max-w-5xl mx-auto py-12 px-4">
+    <div className="flex flex-col items-center justify-center max-w-5xl mx-auto py-12 px-6 md:px-4">
       <div className="flex flex-col md:flex-row items-center justify-center gap-12">
         <motion.img
         initial={{ opacity: 0, y: -50 }}

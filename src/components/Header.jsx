@@ -25,7 +25,7 @@ const Header = () => {
           <Link
             to="hero"
             smooth={true}
-            duration={500}
+            duration={700}
             offset={-70}
             className="text-lg cursor-pointer uppercase font-semibold text-custom-white hover:text-custom-blue hover:font-semibold border-b-2 border-transparent hover:border-custom-blue transition-all duration-300"
           >
@@ -34,7 +34,7 @@ const Header = () => {
           <Link
             to="about"
             smooth={true}
-            duration={500}
+            duration={700}
             offset={-10}
             className="text-lg uppercase cursor-pointer font-semibold text-custom-white hover:text-custom-blue hover:font-semibold border-b-2 border-transparent hover:border-custom-blue transition-all duration-300"
           >
@@ -43,7 +43,7 @@ const Header = () => {
           <Link
             to="skills"
             smooth={true}
-            duration={500}
+            duration={700}
             offset={-50}
             className="text-lg uppercase cursor-pointer font-semibold text-custom-white hover:text-custom-blue hover:font-semibold border-b-2 border-transparent hover:border-custom-blue transition-all duration-300"
           >
@@ -52,7 +52,7 @@ const Header = () => {
           <Link
             to="projects"
             smooth={true}
-            duration={500}
+            duration={700}
             offset={-50}
             className="text-lg uppercase cursor-pointer font-semibold text-custom-white hover:text-custom-blue hover:font-semibold border-b-2 border-transparent hover:border-custom-blue transition-all duration-300"
           >
@@ -61,7 +61,7 @@ const Header = () => {
           <Link
             to="contact"
             smooth={true}
-            duration={500}
+            duration={700}
             offset={-50}
             className="text-lg uppercase cursor-pointer font-semibold text-custom-white hover:text-custom-blue hover:font-semibold border-b-2 border-transparent hover:border-custom-blue transition-all duration-300"
           >
@@ -85,9 +85,9 @@ const Header = () => {
           </div>
           <div className="flex flex-col items-center mt-6 space-y-6">
             <Link
-              to="home"
+              to="hero"
               smooth={true}
-              duration={500}
+              duration={700}
               offset={-70}
               className="text-3xl uppercase font-bold text-custom-white py-4 border-b-2 border-gray-200 w-full text-center"
               onClick={hamburgerMenu}
@@ -97,7 +97,7 @@ const Header = () => {
             <Link
               to="about"
               smooth={true}
-              duration={500}
+              duration={700}
               offset={-90}
               className="text-3xl uppercase font-bold text-custom-white py-4 border-b-2 border-gray-200 w-full text-center"
               onClick={hamburgerMenu}
@@ -107,7 +107,7 @@ const Header = () => {
             <Link
               to="skills"
               smooth={true}
-              duration={500}
+              duration={700}
               offset={-100}
               className="text-3xl uppercase font-bold text-custom-white py-4 border-b-2 border-gray-200 w-full text-center"
               onClick={hamburgerMenu}
@@ -117,8 +117,8 @@ const Header = () => {
             <Link
               to="projects"
               smooth={true}
-              duration={500}
-              offset={-70}
+              duration={700}
+              offset={-50}
               className="text-3xl uppercase font-bold text-custom-white py-4 border-b-2 border-gray-200 w-full text-center"
               onClick={hamburgerMenu}
             >
@@ -127,7 +127,7 @@ const Header = () => {
             <Link
               to="contact"
               smooth={true}
-              duration={500}
+              duration={700}
               offset={-50}
               className="text-3xl uppercase font-bold text-custom-white py-4 border-b-2 border-gray-200 w-full text-center"
               onClick={hamburgerMenu}

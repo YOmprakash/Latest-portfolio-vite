@@ -67,7 +67,7 @@ const Projects = () => {
       
         animate="show"
         variants={containerVariants}
-        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mx-12"
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mx-6 md:mx-12"
       >
         {filteredProjects.map((project) => (
           <motion.div
@@ -82,7 +82,7 @@ const Projects = () => {
               <p className="text-gray-600 mb-4 flex-grow">{project.description}</p>
               <p className="text-gray-500 mb-2"><strong className="text-custom-blue">Tech Stack:</strong> {project.techStack.join(', ')}</p>
             </div>
-            <div className="flex justify-start items-center mt-4 gap-8">
+            <div className="flex justify-center md:justify-start items-center my-4 gap-8">
               <a href={project.gitLink} target="_blank" rel="noopener noreferrer" className="text-custom-blue hover:text-custom-lt-green">
                 <FaGithub className="w-8 h-8" />
               </a>
