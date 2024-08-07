@@ -1,14 +1,15 @@
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import projectsData from '../assets/projectsData';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { useState } from "react";
+import { motion } from "framer-motion";
+import projectsData from "../assets/projectsData";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 const Projects = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedCategory, setSelectedCategory] = useState("all");
 
-  const filteredProjects = selectedCategory === 'all' 
-    ? projectsData 
-    : projectsData.filter(project => project.category === selectedCategory);
+  const filteredProjects =
+    selectedCategory === "all"
+      ? projectsData
+      : projectsData.filter((project) => project.category === selectedCategory);
 
   const containerVariants = {
     hidden: {
@@ -21,7 +22,7 @@ const Projects = () => {
       },
     },
   };
-    
+
   const itemVariants = {
     hidden: {
       opacity: 0,
@@ -37,32 +38,47 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="flex flex-col items-center py-16 h-full mx-auto w-full bg-custom-lt-green">
+    <section
+      id="projects"
+      className="flex flex-col items-center py-16 h-full mx-auto w-full bg-custom-lt-green"
+    >
       <h1 className="text-3xl font-bold text-custom-white mb-8">My Projects</h1>
       <div className="flex space-x-4 mb-8">
-        <motion.button 
+        <motion.button
           whileHover={{ scale: 1.1 }}
-          className={`px-4 py-2 rounded transition-colors duration-300 ${selectedCategory === 'all' ? 'bg-custom-blue text-custom-simple-white' : 'bg-custom-simple-white text-custom-blue hover:bg-custom-blue hover:text-custom-simple-white'}`}
-          onClick={() => setSelectedCategory('all')}
+          className={`px-4 py-2 rounded transition-colors duration-300 ${
+            selectedCategory === "all"
+              ? "bg-custom-blue text-custom-simple-white"
+              : "bg-custom-simple-white text-custom-blue hover:bg-custom-blue hover:text-custom-simple-white"
+          }`}
+          onClick={() => setSelectedCategory("all")}
         >
-          All 
+          All
         </motion.button>
-        <motion.button 
+        <motion.button
           whileHover={{ scale: 1.1 }}
-          className={`px-4 py-2 rounded transition-colors duration-300 ${selectedCategory === 'frontend' ? 'bg-custom-blue text-custom-simple-white' : 'bg-custom-simple-white text-custom-blue hover:bg-custom-blue hover:text-custom-simple-white'}`}
-          onClick={() => setSelectedCategory('frontend')}
+          className={`px-4 py-2 rounded transition-colors duration-300 ${
+            selectedCategory === "frontend"
+              ? "bg-custom-blue text-custom-simple-white"
+              : "bg-custom-simple-white text-custom-blue hover:bg-custom-blue hover:text-custom-simple-white"
+          }`}
+          onClick={() => setSelectedCategory("frontend")}
         >
-          Frontend 
+          Frontend
         </motion.button>
-        <motion.button 
+        <motion.button
           whileHover={{ scale: 1.1 }}
-          className={`px-4 py-2 rounded transition-colors duration-300 ${selectedCategory === 'fullstack' ? 'bg-custom-blue text-custom-simple-white' : 'bg-custom-simple-white text-custom-blue hover:bg-custom-blue hover:text-custom-simple-white'}`}
-          onClick={() => setSelectedCategory('fullstack')}
+          className={`px-4 py-2 rounded transition-colors duration-300 ${
+            selectedCategory === "fullstack"
+              ? "bg-custom-blue text-custom-simple-white"
+              : "bg-custom-simple-white text-custom-blue hover:bg-custom-blue hover:text-custom-simple-white"
+          }`}
+          onClick={() => setSelectedCategory("fullstack")}
         >
-          Full Stack 
+          Full Stack
         </motion.button>
       </div>
-      <motion.div 
+      <motion.div
         initial="hidden"
         whileInView="show"
         variants={containerVariants}
@@ -75,25 +91,48 @@ const Projects = () => {
             variants={itemVariants}
             initial="hidden"
             whileInView="show"
-            
             transition={{ duration: 0.6 }}
-            
             viewport={{ once: true, amount: 0.5 }}
             className="p-4 bg-custom-white flex flex-col rounded-lg hover:shadow-2xl overflow-hidden "
           >
-            <img src={project.img} alt={`${project.title} image`} className="w-full h-42 object-cover  rounded-lg" />
+            <img
+              src={project.img}
+              alt={`${project.title} image`}
+              className="w-full h-42 object-cover  rounded-lg"
+            />
             <div className="p-4 flex flex-col flex-grow">
-              <h2 className="text-xl font-bold text-custom-blue mb-2 text-center">{project.title}</h2>
-              <p className="text-gray-600 mb-4 flex-grow">{project.description}</p>
-              <p className="text-gray-500 "><strong className="text-custom-blue">Tech Stack:</strong> {project.techStack.join(', ')}</p>
+              <h2 className="text-xl font-bold text-custom-blue mb-2 text-center">
+                {project.title}
+              </h2>
+              <p className="text-gray-600 mb-4 flex-grow">
+                {project.description}
+              </p>
+              <p className="text-gray-500 ">
+                <strong className="text-custom-blue">Tech Stack:</strong>{" "}
+                {project.techStack.join(", ")}
+              </p>
             </div>
             <div className="flex justify-center md:justify-between items-center my-2 gap-8">
-              <a href={project.gitLink} target="_blank" rel="noopener noreferrer" className="text-custom-lt-green rounded-full p-2 bg-custom-blue hover:text-custom-blue hover:bg-custom-green">
+              <motion.a
+                initial={{ scale: 1 }}
+                whileHover={{ scale: 1.1 }}
+                href={project.gitLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-custom-lt-green rounded-full p-2 bg-custom-blue hover:text-custom-blue hover:bg-custom-green"
+              >
                 <FaGithub className="w-8 h-8" />
-              </a>
-              <a href={project.deployLink} target="_blank" rel="noopener noreferrer" className="text-custom-lt-green rounded-full p-3 bg-custom-blue hover:text-custom-blue hover:bg-custom-green">
+              </motion.a>
+              <motion.a
+                initial={{ scale: 0.9 }}
+                whileHover={{ scale: 1.1 }}
+                href={project.deployLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-custom-lt-green rounded-full p-3 bg-custom-blue hover:text-custom-blue hover:bg-custom-green"
+              >
                 <FaExternalLinkAlt className="w-6 h-6" />
-              </a>
+              </motion.a>
             </div>
           </motion.div>
         ))}
