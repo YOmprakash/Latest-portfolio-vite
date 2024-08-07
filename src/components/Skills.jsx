@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 import skillsData from '../assets/icons';
 
 const Skills = () => {
@@ -9,7 +10,17 @@ const Skills = () => {
     : skillsData.filter(skill => skill.category === selectedCategory);
 
   return (
-    <div id="skills" className="flex flex-col items-center justify-center w-full  h-full py-8 md:h-screen bg-custom-blue">
+    <motion.div
+      id="skills"
+      className="flex flex-col items-center justify-center w-full h-full py-8 md:h-screen bg-custom-blue"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={{
+        hidden: { opacity: 0 },
+        visible: { opacity: 1, transition: { duration: 0.6 } }
+      }}
+    >
       <h1 className="text-4xl font-bold mb-12 text-custom-green">My Technical Skills</h1>
       <div className="flex space-x-4 mb-12">
         <button
@@ -33,13 +44,21 @@ const Skills = () => {
       </div>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
         {filteredSkills.map((skill) => (
-          <div key={skill.id} className="flex flex-col items-center justify-center p-4 rounded-lg shadow-lg transition-transform transform hover:scale-105 bg-custom-white">
+          <motion.div
+            key={skill.id}
+            className="flex flex-col items-center justify-center p-4 rounded-lg shadow-lg bg-custom-white"
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6 }}
+            whileHover={{ scale: 1.1 }}
+            viewport={{ once: true, amount: 0.5 }}
+          >
             <img src={skill.img} alt={`${skill.name} icon`} className="w-16 h-16 mb-4" />
             <p className="text-lg font-semibold text-custom-blue">{skill.name}</p>
-          </div>
+          </motion.div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 }
 
