@@ -3,30 +3,30 @@ import { motion } from "framer-motion";
 const About = () => (
   <section
     id="about"
-    className="flex flex-col items-center justify-center bg-custom-white h-full py-12 w-full my-6"
+    className="flex flex-col items-center justify-center w-full h-full py-12 my-6 bg-custom-white"
   >
-    <h3 className="text-custom-blue border-b-2 border-custom-blue text-3xl font-extrabold uppercase text-center mb-12">
+    <h3 className="mb-12 text-3xl font-extrabold text-center uppercase border-b-2 text-custom-blue border-custom-blue">
       About Me
     </h3>
-    <div className="flex flex-col items-center justify-center max-w-5xl mx-auto py-12 px-6 md:px-4">
-      <div className="flex flex-col md:flex-row items-center justify-center gap-12">
+    <div className="flex flex-col items-center justify-center max-w-5xl px-6 py-12 mx-auto md:px-4">
+      <div className="flex flex-col items-center justify-center gap-12 md:flex-row">
         <motion.img
         initial={{ opacity: 0, y: -50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="w-full max-w-md rounded-lg shadow-lg mb-8 md:mb-0"
+          className="w-full max-w-md mb-8 rounded-lg shadow-lg md:mb-0"
           src="https://i.postimg.cc/HnhdnrjK/dc.webp"
           alt="about"
         />
-        <div className="flex flex-col text-left max-w-md ">
+        <div className="flex flex-col max-w-md text-left ">
           <motion.h1
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             animate={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1, delay: 0.4 }}
-            className="text-custom-green text-3xl font-bold mb-4"
+            className="mb-4 text-3xl font-bold text-custom-green"
           >
             A Dedicated Developer
           </motion.h1>
@@ -35,7 +35,7 @@ const About = () => (
           whileInView={{ opacity: 1, y: 0 }}
             animate={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 1, delay: 0.5 }} className="text-custom-lt-green text-base font-normal mb-6">
+            transition={{ duration: 1, delay: 0.5 }} className="mb-6 text-base font-normal text-custom-lt-green">
             At NxtWave’s CCBP 4.0 Intensive, I’m currently learning fullstack
             development with a specialization in 4.0 technologies. In love with
             the coding challenges and hands-on projects. With Industry’s first
@@ -47,7 +47,8 @@ const About = () => (
             animate={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1, delay: 0.6 }}
-          className=" text-custom-blue border-2 border-custom-blue rounded-md py-3 px-6 font-medium transition-all duration-300 hover:bg-custom-blue hover:text-custom-green self-start">
+            onClick={() => window.open('https://drive.google.com/file/d/1HaBqzofRXbWuLDfG8K2xrdnHb0pWmCi9/view?usp=sharing', '_blank')}
+          className="self-start px-6 py-3 font-medium transition-all duration-300 border-2 rounded-md text-custom-blue border-custom-blue hover:bg-custom-blue hover:text-custom-green">
             Resume
           </motion.button>
         </div>

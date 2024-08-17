@@ -4,7 +4,7 @@ import Rental from '../assets/Rental.png';
 import Restaura from '../assets/restaura.png';
 import BMI from '../assets/BMI.png';
 import Gemini from '../assets/Gemini.png';
-import Nxtwave  from '../assets/Nxtwave.png';
+import Nxtwave  from '../assets/Screen_view.png';
 import crud     from '../assets/crud.png';
 import Instashare  from '../assets/Instashare.png';
 import NxtTrendz from  '../assets/NxtTrendz.png';
@@ -23,6 +23,16 @@ const projectsData = [
   // },
   {
     id: 1,
+    title: 'NxtWave Clone',
+    img: Nxtwave,
+    description: 'The NxtWave Clone is a front-end project that replicates the design of the original NxtWave website. Developed using React.js with Vite, Tailwind CSS, and React Icons. ',
+    techStack: ['React.js', 'Tailwind CSS','React Icons'],
+    gitLink: 'https://github.com/YOmprakash/Latest-NxtWave-Clone.git',
+    deployLink: 'https://nxtwave-clone-omprakash.vercel.app/',
+    category: 'frontend',
+  },
+  {
+    id: 2,
     title: 'Restaura',
     img: Restaura,
     description: 'A restaurant website showcasing the menu, mission, and reviews. Developed with React, Tailwind CSS, and Framer Motion for a dynamic user experience.',
@@ -32,25 +42,16 @@ const projectsData = [
     category: 'frontend',
   },
   {
-    id: 2,
+    id: 3,
     title: 'Portfolio',
     img: Portfolio,
     description: 'My personal portfolio site highlighting skills, projects, and professional journey, built with React, Tailwind CSS, and Framer Motion.',
-    techStack: ['React.js', 'Tailwind CSS', 'Framer Motion'],
+    techStack: ['React.js', 'Tailwind CSS', 'Framer Motion','React Icons','React-Scroll'],
     gitLink: 'https://github.com/YOmprakash/Latest-portfolio-vite.git',
     deployLink: 'https://latest-portfolio-vite-7brg.vercel.app/',
     category: 'frontend',
   },
-  {
-    id: 3,
-    title: 'Nxtwave Clone',
-    img: Nxtwave,
-    description: 'A clone of the NxtWave website, replicating its design and functionality with React and CSS.',
-    techStack: ['React', 'CSS'],
-    gitLink: 'https://github.com/YOmprakash/Nxtwave-clone.git',
-    deployLink: 'https://omprakash-nxtwave-clone.vercel.app/',
-    category: 'frontend',
-  },
+  
   // {
   //   id: 5,
   //   title: 'Rental Website',
@@ -61,8 +62,19 @@ const projectsData = [
   //   deployLink: 'https://totality-frontend-challenge-two.vercel.app/',
   //   category: 'frontend',
   // },
+  
   {
     id: 4,
+    title: 'InstaShare',
+    img: Instashare,
+    description: 'A responsive Instagram-like application where users can log in, view stories and posts, search for posts by caption, like and dislike posts, and view user-specific content.',
+    techStack: ['React JS, CSS, Bootstrap, React Slick, Figma, client storage, React Icons '],
+    gitLink: 'https://github.com/YOmprakash/InstaShare.git',
+    deployLink: 'https://prakashinsta63.ccbp.tech',
+    category: 'frontend',
+  },
+  {
+    id: 5,
     title: 'Todo Website',
     img: Todo,
     description: 'A To-Do list application for task management, featuring a React frontend and a Node.js backend with Express and MongoDB, styled with Tailwind CSS.',
