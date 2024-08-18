@@ -47,7 +47,7 @@ const About = () => (
             animate={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1, delay: 0.6 }}
-            onClick={() => window.open('https://drive.google.com/file/d/1HaBqzofRXbWuLDfG8K2xrdnHb0pWmCi9/view?usp=sharing', '_blank')}
+            onClick={() => window.open('https://drive.google.com/file/d/13NtKjbLkuLf8xEoCoYqrQHrdg39YaN7n/view?usp=sharing', '_blank')}
           className="self-start px-6 py-3 font-medium transition-all duration-300 border-2 rounded-md text-custom-blue border-custom-blue hover:bg-custom-blue hover:text-custom-green">
             Resume
           </motion.button>
