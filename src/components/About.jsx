@@ -15,7 +15,7 @@ const About = () => (
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="w-full max-w-md mb-8 rounded-lg shadow-lg md:mb-0"
+          className="block w-full max-w-md mb-8 rounded-lg shadow-lg md:mb-0"
           src="https://i.postimg.cc/HnhdnrjK/dc.webp"
           alt="about"
         />

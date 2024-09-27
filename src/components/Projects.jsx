@@ -40,10 +40,10 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="flex flex-col items-center py-16 h-full mx-auto w-full bg-custom-lt-green"
+      className="flex flex-col items-center w-full h-full py-16 mx-auto bg-custom-lt-green"
     >
-      <h1 className="text-3xl font-bold text-custom-white mb-8">My Projects</h1>
-      <div className="flex space-x-4 mb-8">
+      <h1 className="mb-8 text-3xl font-bold text-custom-white">My Projects</h1>
+      <div className="flex mb-8 space-x-4">
         <motion.button
           whileHover={{ scale: 1.1 }}
           className={`px-4 py-2 rounded transition-colors duration-300 ${
@@ -83,7 +83,7 @@ const Projects = () => {
         whileInView="show"
         variants={containerVariants}
         viewport={{ once: true }}
-        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 mx-6 md:mx-12"
+        className="grid grid-cols-1 gap-12 mx-6 sm:grid-cols-2 md:grid-cols-3 md:mx-12"
       >
         {filteredProjects.map((project) => (
           <motion.div
@@ -93,33 +93,33 @@ const Projects = () => {
             whileInView="show"
             transition={{ duration: 0.6 }}
             viewport={{ once: true, amount: 0.5 }}
-            className="p-4 bg-custom-white flex flex-col rounded-lg hover:shadow-2xl overflow-hidden "
+            className="flex flex-col p-4 overflow-hidden rounded-lg bg-custom-white hover:shadow-2xl "
           >
             <img
               src={project.img}
               alt={`${project.title} image`}
-              className="w-full h-42 object-cover  rounded-lg"
+              className="block object-cover w-full rounded-lg h-42"
             />
-            <div className="p-4 flex flex-col flex-grow">
-              <h2 className="text-xl font-bold text-custom-blue mb-2 text-center">
+            <div className="flex flex-col flex-grow p-4">
+              <h2 className="mb-2 text-xl font-bold text-center text-custom-blue">
                 {project.title}
               </h2>
-              <p className="text-gray-600 mb-4 flex-grow">
+              <p className="flex-grow mb-4 text-gray-600">
                 {project.description}
               </p>
               <p className="text-gray-500 ">
-                <strong className="text-custom-blue">Tech Stack:</strong>{" "}
+                <strong className="text-custom-blue">Tech Stack:</strong>
                 {project.techStack.join(", ")}
               </p>
             </div>
-            <div className="flex justify-center md:justify-between items-center my-2 gap-8">
+            <div className="flex items-center justify-center gap-8 my-2 md:justify-between">
               <motion.a
                 initial={{ scale: 1 }}
                 whileHover={{ scale: 1.1 }}
                 href={project.gitLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-custom-lt-green rounded-full p-2 bg-custom-blue hover:text-custom-blue hover:bg-custom-green"
+                className="p-2 rounded-full text-custom-lt-green bg-custom-blue hover:text-custom-blue hover:bg-custom-green"
               >
                 <FaGithub className="w-8 h-8" />
               </motion.a>
@@ -129,7 +129,7 @@ const Projects = () => {
                 href={project.deployLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-custom-lt-green rounded-full p-3 bg-custom-blue hover:text-custom-blue hover:bg-custom-green"
+                className="p-3 rounded-full text-custom-lt-green bg-custom-blue hover:text-custom-blue hover:bg-custom-green"
               >
                 <FaExternalLinkAlt className="w-6 h-6" />
               </motion.a>
