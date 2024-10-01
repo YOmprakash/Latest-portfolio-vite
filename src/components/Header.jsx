@@ -14,20 +14,20 @@ const Header = () => {
     <motion.header
     initial={{ opacity: 0, y: -50 }}
     animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.5 }} className="fixed w-full z-50 bg-custom-green ">
+    transition={{ duration: 0.5 }} className="fixed z-50 w-full bg-custom-green ">
       <div className="flex items-center justify-between px-4 md:px-16 md:py-4">
         <Link to="home" smooth={true} duration={500} offset={-50}>
-          <span className="text-2xl font-extrabold text-custom-white cursor-pointer">
+          <span className="text-2xl font-extrabold cursor-pointer text-custom-white">
             OYdev.
           </span>
         </Link>
-        <div className="hidden md:flex space-x-10">
+        <div className="hidden space-x-10 md:flex">
           <Link
             to="hero"
             smooth={true}
             duration={700}
             offset={-70}
-            className="text-lg cursor-pointer uppercase font-semibold text-custom-white hover:text-custom-blue hover:font-semibold border-b-2 border-transparent hover:border-custom-blue transition-all duration-300"
+            className="text-lg font-semibold uppercase transition-all duration-300 border-b-2 border-transparent cursor-pointer text-custom-white hover:text-custom-blue hover:font-semibold hover:border-custom-blue"
           >
             Home
           </Link>
@@ -36,7 +36,7 @@ const Header = () => {
             smooth={true}
             duration={700}
             offset={-50}
-            className="text-lg uppercase cursor-pointer font-semibold text-custom-white hover:text-custom-blue hover:font-semibold border-b-2 border-transparent hover:border-custom-blue transition-all duration-300"
+            className="text-lg font-semibold uppercase transition-all duration-300 border-b-2 border-transparent cursor-pointer text-custom-white hover:text-custom-blue hover:font-semibold hover:border-custom-blue"
           >
             About
           </Link>
@@ -45,7 +45,7 @@ const Header = () => {
             smooth={true}
             duration={700}
             offset={-50}
-            className="text-lg uppercase cursor-pointer font-semibold text-custom-white hover:text-custom-blue hover:font-semibold border-b-2 border-transparent hover:border-custom-blue transition-all duration-300"
+            className="text-lg font-semibold uppercase transition-all duration-300 border-b-2 border-transparent cursor-pointer text-custom-white hover:text-custom-blue hover:font-semibold hover:border-custom-blue"
           >
             Skills
           </Link>
@@ -54,7 +54,7 @@ const Header = () => {
             smooth={true}
             duration={700}
             offset={-50}
-            className="text-lg uppercase cursor-pointer font-semibold text-custom-white hover:text-custom-blue hover:font-semibold border-b-2 border-transparent hover:border-custom-blue transition-all duration-300"
+            className="text-lg font-semibold uppercase transition-all duration-300 border-b-2 border-transparent cursor-pointer text-custom-white hover:text-custom-blue hover:font-semibold hover:border-custom-blue"
           >
             Projects
           </Link>
@@ -63,33 +63,33 @@ const Header = () => {
             smooth={true}
             duration={700}
             offset={-50}
-            className="text-lg uppercase cursor-pointer font-semibold text-custom-white hover:text-custom-blue hover:font-semibold border-b-2 border-transparent hover:border-custom-blue transition-all duration-300"
+            className="text-lg font-semibold uppercase transition-all duration-300 border-b-2 border-transparent cursor-pointer text-custom-white hover:text-custom-blue hover:font-semibold hover:border-custom-blue"
           >
             Contact
           </Link>
         </div>
-        <div className="md:hidden flex items-center p-4" onClick={hamburgerMenu}>
+        <div className="flex items-center p-4 md:hidden" onClick={hamburgerMenu}>
           <IconMenu2 size={32} color='#FEFFFF' />
         </div>
       </div>
       <div
-        className={`fixed top-0 right-0 h-full w-full md:w-2/3 bg-custom-green shadow-lg transition-transform ${
+        className={`fixed top-0 right-0 h-full w-full md:w-2/3 bg-white shadow-lg transition-transform ${
           hamburger
             ? "translate-x-0 opacity-100 visible"
-            : "translate-x-full opacity-0 invisible"
-        } ease-in-out duration-300`}
+            : "translate-x-full opacity-0 invisible "
+        } ease-in-out duration-500`}
       >
-        <div className="flex flex-col items-center pt-6 relative">
+        <div className="relative flex flex-col items-center pt-6">
           <div className="absolute top-4 right-4" onClick={hamburgerMenu}>
-            <IconX size={32} color='#FEFFFF' />
+            <IconX size={32} color='#17252A' />
           </div>
-          <div className="flex flex-col items-center mt-6 space-y-6">
+          <div className="flex flex-col items-center mt-6 space-y-6 text-custom-blue">
             <Link
               to="hero"
               smooth={true}
               duration={700}
               offset={-70}
-              className="text-3xl uppercase font-bold text-custom-white py-4 border-b-2 border-gray-200 w-full text-center"
+              className="w-full py-4 text-3xl font-bold text-center uppercase border-b-2 border-gray-200 text-custom-blue"
               onClick={hamburgerMenu}
             >
               Home
@@ -99,7 +99,7 @@ const Header = () => {
               smooth={true}
               duration={700}
               offset={-90}
-              className="text-3xl uppercase font-bold text-custom-white py-4 border-b-2 border-gray-200 w-full text-center"
+              className="w-full py-4 text-3xl font-bold text-center uppercase border-b-2 border-gray-200 "
               onClick={hamburgerMenu}
             >
               About
@@ -109,7 +109,7 @@ const Header = () => {
               smooth={true}
               duration={700}
               offset={-100}
-              className="text-3xl uppercase font-bold text-custom-white py-4 border-b-2 border-gray-200 w-full text-center"
+              className="w-full py-4 text-3xl font-bold text-center uppercase border-b-2 border-gray-200 "
               onClick={hamburgerMenu}
             >
               Skills
@@ -119,7 +119,7 @@ const Header = () => {
               smooth={true}
               duration={700}
               offset={-50}
-              className="text-3xl uppercase font-bold text-custom-white py-4 border-b-2 border-gray-200 w-full text-center"
+              className="w-full py-4 text-3xl font-bold text-center uppercase border-b-2 border-gray-200 "
               onClick={hamburgerMenu}
             >
               Projects
@@ -129,7 +129,7 @@ const Header = () => {
               smooth={true}
               duration={700}
               offset={-50}
-              className="text-3xl uppercase font-bold text-custom-white py-4 border-b-2 border-gray-200 w-full text-center"
+              className="w-full py-4 text-3xl font-bold text-center uppercase border-b-2 border-gray-200 "
               onClick={hamburgerMenu}
             >
               Contact
