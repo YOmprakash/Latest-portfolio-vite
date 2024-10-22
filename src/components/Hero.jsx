@@ -1,19 +1,19 @@
 import { motion } from "framer-motion";
-
+import person from '../assets/prakash.png';
 import { IconBrandLinkedin, IconBrandGithub } from "@tabler/icons-react";
 
 const Hero = () => (
   <section
     id="hero"
-    className="h-screen p-8 flex items-center justify-center bg-custom-green"
+    className="flex items-center justify-center h-screen p-8 bg-custom-green"
   >
-    <div className="w-full max-w-screen-lg flex flex-col md:flex-row items-center justify-center mx-auto">
-      <div className="order-2 md:order-1 text-center md:text-left md:w-3/4">
+    <div className="flex flex-col items-center justify-center w-full max-w-screen-lg mx-auto md:flex-row">
+      <div className="order-2 text-center md:order-1 md:text-left md:w-3/4">
         <motion.h2
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3, ease: [0, 0.71, 0.2, 1.01] }}
-          className="text-custom-white text-xl font-semibold mt-4 md:mt-0"
+          className="mt-4 text-xl font-semibold text-custom-white md:mt-0"
         >
           Hello{" "}
           <img
@@ -24,18 +24,18 @@ const Hero = () => (
         </motion.h2>
         <motion.h1 initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 , delay: 0.4 }} className="text-custom-blue text-5xl my-4 font-extrabold">
+          transition={{ duration: 0.5 , delay: 0.4 }} className="my-4 text-5xl font-extrabold text-custom-blue">
           Omprakash Yamavaram
         </motion.h1>
         <motion.p initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 , delay: 0.5 }} className="text-custom-white text-lg font-normal">
+          transition={{ duration: 0.5 , delay: 0.5 }} className="text-lg font-normal text-custom-white">
           I'm a FullStack Developer
         </motion.p>
         <motion.div  initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 , delay: 0.6 }}
-        className="flex items-center justify-center gap-4 md:justify-start mt-6">
+        className="flex items-center justify-center gap-4 mt-6 md:justify-start">
           <motion.a
           initial={{scale:1}}
           whileHover={{scale:1.2}}
@@ -44,7 +44,7 @@ const Hero = () => (
             rel="noopener noreferrer"
             className="mr-2"
           >
-            <IconBrandLinkedin className="text-custom-simple-white w-10 h-10 bg-custom-blue p-2 rounded-full transition-transform   hover:text-custom-blue hover:bg-custom-white" />
+            <IconBrandLinkedin className="w-10 h-10 p-2 transition-transform rounded-full text-custom-simple-white bg-custom-blue hover:text-custom-blue hover:bg-custom-white" />
           </motion.a>
           <motion.a
           initial={{scale:1}}
@@ -53,7 +53,7 @@ const Hero = () => (
             target="_blank"
             rel="noopener noreferrer"
           >
-            <IconBrandGithub className="text-custom-simple-white w-10 h-10 bg-custom-blue p-2 rounded-full transition-transform  hover:text-custom-blue hover:bg-custom-white" />
+            <IconBrandGithub className="w-10 h-10 p-2 transition-transform rounded-full text-custom-simple-white bg-custom-blue hover:text-custom-blue hover:bg-custom-white" />
           </motion.a>
         </motion.div>
       </div>
@@ -65,8 +65,8 @@ const Hero = () => (
           
           transition={{  duration: 0.8, delay: 0.3 }}
 
-        className="order-1 md:order-2 mt-10 md:mt-0 w-full max-w-[220px] md:max-w-[300px] rounded-full md:rounded-md bg-custom-white"
-        src="https://i.postimg.cc/RFwRPvPb/cropped-image.png"
+        className="order-1 md:order-2 mt-10 md:mt-0 w-full max-w-[220px] md:max-w-[300px]  rounded-full  bg-custom-white"
+        src={person}
         alt="Person"
       />
     </div>
