@@ -15,12 +15,7 @@ const Hero = () => (
           transition={{ duration: 0.5, delay: 0.3, ease: [0, 0.71, 0.2, 1.01] }}
           className="mt-4 text-xl font-semibold text-custom-white md:mt-0"
         >
-          Hello{" "}
-          <img
-            src="https://www.stefantopalovic.com/static/media/waving.1bae5fcfb51082b5c2b4.png"
-            className="inline w-10"
-            alt="wave"
-          />
+          Hello
         </motion.h2>
         <motion.h1 initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
